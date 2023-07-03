@@ -1,0 +1,28 @@
+{
+  "name": "postgres-connection",
+  "version": "0.0.1",
+  "description": "Connection helper for porsager/postgres",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2adapt/postgres-connection.git"
+  },
+  "keywords": [
+    "postgres"
+  ],
+  "author": "Paulo Vieira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2adapt/postgres-connection/issues"
+  },
+  "homepage": "https://github.com/2adapt/postgres-connection#readme",
+  "dependencies": {
+    "postgres": "^3.3.5"
+  },
+  "devDependencies": {
+    "spok": "^1.5.5"
+  }
+}
