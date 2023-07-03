@@ -7,7 +7,6 @@ let defaultConfig = {
 	host: process.env.PGHOST,
 	port: process.env.PGPORT,
 	idle_timeout: process.env.PGIDLE_TIMEOUT || 30,
-	onnotice: function(){ },
 	connection: {
 	    application_name: process.env.PGAPPNAME || `postgres.js-${process.pid}`
 	},	
@@ -30,13 +29,12 @@ let createPostgresConnection = function createPostgresConnection (customConfig =
 		'database',
 	];
 
-	for(let option of configOptionsToCheck) {
-		// console.log('finalConfig[option]', finalConfig[option])
+	for (let option of configOptionsToCheck) {
 		let optionIsMissing = (finalConfig[option] == null || finalConfig[option] === '');
 
 		if (optionIsMissing) {
-			console.log('resturn early!')
-			return
+			//console.log(`[postgres-connection] missing configuration option: ${option}`);
+			return;
 		}
 	}
 
